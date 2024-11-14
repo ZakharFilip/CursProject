@@ -1,0 +1,14 @@
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\bin\Debug\EcsportManagementKurs.exe.config
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\bin\Debug\EcsportManagementKurs.exe
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\bin\Debug\EcsportManagementKurs.pdb
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.AssemblyReference.cache
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.Form1.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.Properties.Resources.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.GenerateResource.cache
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.CoreCompileInputs.cache
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.exe
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.pdb
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.InsertForm.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.SuggestedBindingRedirects.cache
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditAddPage.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditContractLine.resources

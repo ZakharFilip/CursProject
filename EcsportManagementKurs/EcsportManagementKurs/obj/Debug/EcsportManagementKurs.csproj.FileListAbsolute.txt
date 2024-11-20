@@ -9,6 +9,6 @@ S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\E
 S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.exe
 S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.pdb
 S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.InsertForm.resources
-S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.SuggestedBindingRedirects.cache
 S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditAddPage.resources
 S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditContractLine.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.SuggestedBindingRedirects.cache

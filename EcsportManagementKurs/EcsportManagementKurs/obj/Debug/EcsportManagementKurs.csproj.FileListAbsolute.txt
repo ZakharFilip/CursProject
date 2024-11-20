@@ -12,3 +12,17 @@ S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\E
 S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditAddPage.resources
 S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditContractLine.resources
 S:\USERS\52-02\Филиппов Захар Геннадьевич\Курсач\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.SuggestedBindingRedirects.cache
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\bin\Debug\EcsportManagementKurs.exe.config
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\bin\Debug\EcsportManagementKurs.exe
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\bin\Debug\EcsportManagementKurs.pdb
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.AssemblyReference.cache
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.SuggestedBindingRedirects.cache
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditAddPage.resources
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditContractLine.resources
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.Form1.resources
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.InsertForm.resources
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.Properties.Resources.resources
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.GenerateResource.cache
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.CoreCompileInputs.cache
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.exe
+C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.pdb

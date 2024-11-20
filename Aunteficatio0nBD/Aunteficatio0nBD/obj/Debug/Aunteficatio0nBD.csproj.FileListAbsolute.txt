@@ -1,0 +1,24 @@
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\bin\Debug\Aunteficatio0nBD.exe.config
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\bin\Debug\Aunteficatio0nBD.exe
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\bin\Debug\Aunteficatio0nBD.pdb
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.csproj.AssemblyReference.cache
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.Form1.resources
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.Properties.Resources.resources
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.csproj.GenerateResource.cache
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.csproj.CoreCompileInputs.cache
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.exe
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.pdb
+C:\Users\10220468\source\repos\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.Form2.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\bin\Debug\Aunteficatio0nBD.exe.config
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\bin\Debug\Aunteficatio0nBD.exe
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\bin\Debug\Aunteficatio0nBD.pdb
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.csproj.AssemblyReference.cache
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.Form1.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.Form2.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.Properties.Resources.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.csproj.GenerateResource.cache
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.csproj.CoreCompileInputs.cache
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.exe
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.pdb
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.Regestration.resources
+S:\USERS\52-02\Филиппов Захар Геннадьевич\ProgramMuduls\Aunteficatio0nBD\Aunteficatio0nBD\obj\Debug\Aunteficatio0nBD.csproj.SuggestedBindingRedirects.cache

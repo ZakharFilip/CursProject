@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EcsportManagementKurs
@@ -19,6 +20,8 @@ namespace EcsportManagementKurs
         private SqlDataAdapter sqlDataAdapterForLeftGrid;
         private SqlDataAdapter SelectForRightGrid;
         private int itemId;
+        private string StringTransltorForBadFunctions;
+        private string idDocumentReal;
         public EditAddPage()
         {
             InitializeComponent();
@@ -39,6 +42,10 @@ namespace EcsportManagementKurs
                 textBox2.Text = row["idSupplier"].ToString();
                 textBox4.Text = row["idRecipient"].ToString();
                 textBox1.Text = row["Date"].ToString();
+                idDocumentReal = row["idDocument"].ToString();
+
+                testlabel.Text = row["idDocument"].ToString();
+
 
             }
 
@@ -60,9 +67,9 @@ namespace EcsportManagementKurs
             {
                 //Добавить код для изменения коетракта
                 
-                string querySupplier = "UPDATE Contract SET idSupplier = @updatedValue WHERE idDocument = itemId";
-                string queryRecipient = "UPDATE Contract SET idRecipient = @updatedRecipient WHERE idDocument = itemId";
-                string queryData = "UPDATE Contract SET idSupplier = @updatedData WHERE idDocument = itemId";
+                string querySupplier = "UPDATE Contract SET idSupplier = "+ textBox2.Text + " WHERE idDocument = "+ idDocumentReal;
+                string queryRecipient = "UPDATE Contract SET idRecipient = "+ textBox4.Text + " WHERE idDocument = " + idDocumentReal;
+                string queryData = "UPDATE Contract SET Date = "+ textBox1.Text +" WHERE idDocument = "+ idDocumentReal;
 
 
                 int recordIdentifier =itemId;
@@ -73,13 +80,13 @@ namespace EcsportManagementKurs
 
 
                 SqlCommand commandAddSupplier = new SqlCommand(querySupplier, connection);
-                commandAddSupplier.Parameters.AddWithValue("@updatedValue", newSupplierString);
+                commandAddSupplier.Parameters.AddWithValue(textBox2.Text, newSupplierString);
 
                 SqlCommand commandAddRecipient = new SqlCommand(queryRecipient, connection);
-                commandAddRecipient.Parameters.AddWithValue("@updatedRecipient", newRecipient);
+                commandAddRecipient.Parameters.AddWithValue(textBox4.Text, newRecipient);
 
                 SqlCommand commandAddData = new SqlCommand(queryData, connection);
-                commandAddRecipient.Parameters.AddWithValue("@updatedData", newData);
+                commandAddRecipient.Parameters.AddWithValue(textBox1.Text, newData);
 
 
                 try

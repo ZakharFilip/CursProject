@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.testlabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.testlabel);
             this.groupBox1.Controls.Add(this.NameOfProductLabel);
             this.groupBox1.Controls.Add(this.changeItemButton);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -102,6 +104,15 @@
             this.textBox4.Size = new System.Drawing.Size(121, 20);
             this.textBox4.TabIndex = 4;
             // 
+            // testlabel
+            // 
+            this.testlabel.AutoSize = true;
+            this.testlabel.Location = new System.Drawing.Point(75, 85);
+            this.testlabel.Name = "testlabel";
+            this.testlabel.Size = new System.Drawing.Size(39, 13);
+            this.testlabel.TabIndex = 10;
+            this.testlabel.Text = "no text";
+            // 
             // EditAddPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,5 +137,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label testlabel;
     }
 }

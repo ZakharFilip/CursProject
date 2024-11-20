@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Aunteficatio0nBD
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            string usak;
+            InitializeComponent();
+            string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                connectionStatusLabel.Text = "Connected";
+                string selectQuery = "SELECT * FROM Product;";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(selectQuery, connection);
+                DataSet usersSet = new DataSet();
+                sqlDataAdapter.Fill(usersSet);
+                usersGrid.DataSource = usersSet.Tables[0];
+
+
+
+
+
+               
+            }
+        }
+
+        private void usersGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
+}

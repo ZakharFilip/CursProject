@@ -16,7 +16,6 @@ C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportMana
 C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\bin\Debug\EcsportManagementKurs.exe
 C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\bin\Debug\EcsportManagementKurs.pdb
 C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.AssemblyReference.cache
-C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.csproj.SuggestedBindingRedirects.cache
 C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditAddPage.resources
 C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.EditContractLine.resources
 C:\Users\10220468\Documents\GitHub\CursProject\EcsportManagementKurs\EcsportManagementKurs\obj\Debug\EcsportManagementKurs.Form1.resources

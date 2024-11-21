@@ -31,11 +31,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.changeItemButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.testlabel = new System.Windows.Forms.Label();
             this.NameOfProductLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.testlabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Редактировать";
             // 
+            // testlabel
+            // 
+            this.testlabel.AutoSize = true;
+            this.testlabel.Location = new System.Drawing.Point(75, 85);
+            this.testlabel.Name = "testlabel";
+            this.testlabel.Size = new System.Drawing.Size(39, 13);
+            this.testlabel.TabIndex = 10;
+            this.testlabel.Text = "no text";
+            // 
             // NameOfProductLabel
             // 
             this.NameOfProductLabel.AutoSize = true;
@@ -103,15 +112,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 20);
             this.textBox4.TabIndex = 4;
-            // 
-            // testlabel
-            // 
-            this.testlabel.AutoSize = true;
-            this.testlabel.Location = new System.Drawing.Point(75, 85);
-            this.testlabel.Name = "testlabel";
-            this.testlabel.Size = new System.Drawing.Size(39, 13);
-            this.testlabel.TabIndex = 10;
-            this.testlabel.Text = "no text";
             // 
             // EditAddPage
             // 

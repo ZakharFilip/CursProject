@@ -40,10 +40,10 @@ namespace EcsportManagementKurs
             {
                 var row = ContractSet.Tables[0].Rows[itemId];
                 textBox2.Text = row["idSupplier"].ToString();
+
                 textBox4.Text = row["idRecipient"].ToString();
                 textBox1.Text = row["Date"].ToString();
                 idDocumentReal = row["idDocument"].ToString();
-
                 testlabel.Text = row["idDocument"].ToString();
 
 
@@ -55,29 +55,37 @@ namespace EcsportManagementKurs
             //кнопка для редактирования контракта 
             
 
-            InitializeComponent();
+           // InitializeComponent();
             string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
             
 
-            MessageBox.Show(itemId.ToString());
+            //MessageBox.Show(itemId.ToString());
 
             if (connection.State == System.Data.ConnectionState.Open)
             {
                 //Добавить код для изменения коетракта
+                int recordIdentifier = itemId;
+                string newSupplierString = textBox2.Text;
+                 string newRecipient = textBox4.Text.ToString();
                 
-                string querySupplier = "UPDATE Contract SET idSupplier = "+ textBox2.Text + " WHERE idDocument = "+ idDocumentReal;
-                string queryRecipient = "UPDATE Contract SET idRecipient = "+ textBox4.Text + " WHERE idDocument = " + idDocumentReal;
-                string queryData = "UPDATE Contract SET Date = "+ textBox1.Text +" WHERE idDocument = "+ idDocumentReal;
+                 string newData = textBox1.Text;
 
 
-                int recordIdentifier =itemId;
-                string newSupplierString = textBox4.Text;
-                string newRecipient = textBox2.Text;
-                string newData = textBox1.Text;
+                MessageBox.Show(newRecipient+"ddddd");
 
 
+                string querySupplier = "UPDATE Contract SET idSupplier = "+ newRecipient + " WHERE idDocument = "+ idDocumentReal;
+                string queryRecipient = "UPDATE Contract SET idRecipient = "+ newSupplierString + " WHERE idDocument = " + idDocumentReal;
+                string queryData = "UPDATE Contract SET Date = "+ newData + " WHERE idDocument = "+ idDocumentReal;
+
+
+                
+
+                
+
+                MessageBox.Show(querySupplier);
 
                 SqlCommand commandAddSupplier = new SqlCommand(querySupplier, connection);
                 commandAddSupplier.Parameters.AddWithValue(textBox2.Text, newSupplierString);
@@ -93,6 +101,8 @@ namespace EcsportManagementKurs
                 {
                     
                     int rowsAffected = commandAddSupplier.ExecuteNonQuery(); // Выполняем запрос
+                    rowsAffected = rowsAffected + commandAddRecipient.ExecuteNonQuery();
+                    rowsAffected = rowsAffected + commandAddData.ExecuteNonQuery();
 
                     // Проверяем, были ли затронуты строки
                     if (rowsAffected > 0)

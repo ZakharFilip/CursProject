@@ -93,6 +93,8 @@ namespace EcsportManagementKurs
         private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Левая кнопака редактировать
+            
+
             var selectedRowIndex = -1;
             if (LeftMainGrid.SelectedRows.Count > 0 && LeftMainGrid.SelectedRows[0].Index < LeftMainGrid.Rows.Count - 1)
             {
@@ -129,6 +131,57 @@ namespace EcsportManagementKurs
         private void LeftMainGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ViviodLineButton_Click(object sender, EventArgs e)
+        {
+            //Вывод вправоооооооооооооооооо
+            
+        }
+        void UpdateDataGrid()
+        {
+            string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection = new SqlConnection(connectionString);
+            sqlDataAdapterForLeftGrid = new SqlDataAdapter($"SELECT * FROM StaticProperty", connection);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapterForLeftGrid.Fill(dataTable);
+            LeftMainGrid.DataSource = dataTable;
+
+        }
+        private void удалитьToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            var selectedRowIndex = -1;
+            if (LeftMainGrid.SelectedRows.Count > 0 && LeftMainGrid.SelectedRows[0].Index < LeftMainGrid.Rows.Count - 1)
+            {
+                selectedRowIndex = LeftMainGrid.SelectedRows[0].Index;
+            }
+            else
+            {
+                MessageBox.Show("Вы не выбрали строку для УДАЛЕНИЯ!!!");
+                return;
+            }
+            DialogResult result = MessageBox.Show("Вы уверенны, что хотите удалить???", "Удалить", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+
+                DataGridViewRow currentRow = LeftMainGrid.CurrentRow;
+                var idValue = currentRow.Cells["idDocument"].Value;
+                Convert.ToInt32(idValue);
+
+
+                string deletequery = "DELETE FROM Contract WHERE idDocument = " + idValue + ";";
+                SqlCommand deleteComand = new SqlCommand(deletequery, connection);
+
+                int rowsAffected = deleteComand.ExecuteNonQuery();
+
+                UpdateDataGrid();
+            }
         }
     }
     

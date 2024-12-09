@@ -74,6 +74,24 @@ namespace EcsportManagementKurs
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
+        }
+
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //кнопка удалить
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             //Левая кнопака редактировать
             var selectedRowIndex = -1;
             if (LeftMainGrid.SelectedRows.Count > 0 && LeftMainGrid.SelectedRows[0].Index < LeftMainGrid.Rows.Count - 1)
@@ -87,18 +105,11 @@ namespace EcsportManagementKurs
             }
             EditAddPage editAddPage = new EditAddPage(selectedRowIndex, ContractSet, sqlDataAdapterForLeftGrid);
             editAddPage.Show();
+
+            
         }
 
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //кнопка удалить
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void редактироватьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //правая кнопка редактировать 
             var selectedRowIndex = -1;
@@ -113,6 +124,11 @@ namespace EcsportManagementKurs
             }
             EditContractLine editContractLine = new EditContractLine(selectedRowIndex, ContractLineSet, SelectForRightGrid);
             editContractLine.Show();
+        }
+
+        private void LeftMainGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     

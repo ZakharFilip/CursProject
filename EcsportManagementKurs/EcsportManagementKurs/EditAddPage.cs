@@ -42,7 +42,14 @@ namespace EcsportManagementKurs
                 textBox2.Text = row["idSupplier"].ToString();
 
                 textBox4.Text = row["idRecipient"].ToString();
-                textBox1.Text = row["Date"].ToString();
+
+                string newData = row["Date"].ToString();
+
+
+                newData = newData.Replace('_', ' ');
+
+                dateTimePicker1.Text= newData;
+
                 idDocumentReal = row["idDocument"].ToString();
                 testlabel.Text = row["idDocument"].ToString();
 
@@ -59,33 +66,24 @@ namespace EcsportManagementKurs
             string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            
 
-            //MessageBox.Show(itemId.ToString());
+
+            MessageBox.Show(dateTimePicker1.Text);
 
             if (connection.State == System.Data.ConnectionState.Open)
             {
-                //Добавить код для изменения коетракта
+                //Добавить код для изменения контракта
                 int recordIdentifier = itemId;
                 string newSupplierString = textBox2.Text;
-                 string newRecipient = textBox4.Text.ToString();
-                
-                 string newData = textBox1.Text;
+                string newRecipient = textBox4.Text.ToString();
+                 string newData = dateTimePicker1.Text;
 
+                newData=newData.Replace('.','_').Replace(' ', '_');
 
-                MessageBox.Show(newRecipient+"ddddd");
+                string querySupplier = $"UPDATE Contract SET idSupplier =  { newRecipient}  WHERE idDocument = {Convert.ToInt32( idDocumentReal)}";
+                string queryRecipient = $"UPDATE Contract SET idRecipient = { newSupplierString}  WHERE idDocument =  {Convert.ToInt32(idDocumentReal)}";
 
-
-                string querySupplier = "UPDATE Contract SET idSupplier = "+ newRecipient + " WHERE idDocument = "+ idDocumentReal;
-                string queryRecipient = "UPDATE Contract SET idRecipient = "+ newSupplierString + " WHERE idDocument = " + idDocumentReal;
-                string queryData = "UPDATE Contract SET Date = "+ newData + " WHERE idDocument = "+ idDocumentReal;
-
-
-                
-
-                
-
-                MessageBox.Show(querySupplier);
+                string queryData = $"UPDATE Contract SET Date =  '{ newData}' WHERE idDocument = { Convert.ToInt32(idDocumentReal)}";
 
                 SqlCommand commandAddSupplier = new SqlCommand(querySupplier, connection);
                 commandAddSupplier.Parameters.AddWithValue(textBox2.Text, newSupplierString);
@@ -94,15 +92,15 @@ namespace EcsportManagementKurs
                 commandAddRecipient.Parameters.AddWithValue(textBox4.Text, newRecipient);
 
                 SqlCommand commandAddData = new SqlCommand(queryData, connection);
-                commandAddRecipient.Parameters.AddWithValue(textBox1.Text, newData);
-
+                commandAddRecipient.Parameters.AddWithValue(newData, newData);
+                
 
                 try
                 {
                     
                     int rowsAffected = commandAddSupplier.ExecuteNonQuery(); // Выполняем запрос
                     rowsAffected = rowsAffected + commandAddRecipient.ExecuteNonQuery();
-                    rowsAffected = rowsAffected + commandAddData.ExecuteNonQuery();
+                   rowsAffected = rowsAffected + commandAddData.ExecuteNonQuery();
 
                     // Проверяем, были ли затронуты строки
                     if (rowsAffected > 0)

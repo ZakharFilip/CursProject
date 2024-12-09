@@ -28,30 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LeftMainGrid = new System.Windows.Forms.DataGridView();
             this.RightMainGrid = new System.Windows.Forms.DataGridView();
             this.ViviodLineButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.connectionStatusLabel = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.contextMenuStripLeft = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStripRight = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.редактироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.строкуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.контрактToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.LeftMainGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightMainGrid)).BeginInit();
+            this.contextMenuStripLeft.SuspendLayout();
+            this.contextMenuStripRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMainGrid
             // 
             this.LeftMainGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LeftMainGrid.ContextMenuStrip = this.contextMenuStripLeft;
             this.LeftMainGrid.Location = new System.Drawing.Point(12, 12);
             this.LeftMainGrid.Name = "LeftMainGrid";
             this.LeftMainGrid.Size = new System.Drawing.Size(704, 432);
             this.LeftMainGrid.TabIndex = 14;
+            this.LeftMainGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LeftMainGrid_CellContentClick);
             // 
             // RightMainGrid
             // 
             this.RightMainGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RightMainGrid.ContextMenuStrip = this.contextMenuStripRight;
             this.RightMainGrid.Location = new System.Drawing.Point(759, 12);
             this.RightMainGrid.Name = "RightMainGrid";
             this.RightMainGrid.Size = new System.Drawing.Size(704, 432);
@@ -87,18 +99,6 @@
             this.button5.Text = "Сформировать Отчёт";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Location = new System.Drawing.Point(1229, 566);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 46);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Удалить строку";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // connectionStatusLabel
             // 
             this.connectionStatusLabel.AutoSize = true;
@@ -109,37 +109,76 @@
             this.connectionStatusLabel.TabIndex = 26;
             this.connectionStatusLabel.Text = "No conection";
             // 
-            // button2
+            // contextMenuStripLeft
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(161, 450);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(355, 23);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Редактировать";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.contextMenuStripLeft.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.редактироватьToolStripMenuItem,
+            this.удалитьToolStripMenuItem,
+            this.удалитьToolStripMenuItem2});
+            this.contextMenuStripLeft.Name = "contextMenuStripLeft";
+            this.contextMenuStripLeft.Size = new System.Drawing.Size(191, 70);
             // 
-            // button6
+            // редактироватьToolStripMenuItem
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(1007, 450);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(355, 23);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Редактировать";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
+            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.редактироватьToolStripMenuItem.Text = "Редактировать";
+            this.редактироватьToolStripMenuItem.Click += new System.EventHandler(this.редактироватьToolStripMenuItem_Click);
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.удалитьToolStripMenuItem.Text = "Вывести содержание";
+            // 
+            // contextMenuStripRight
+            // 
+            this.contextMenuStripRight.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.редактироватьToolStripMenuItem1,
+            this.удалитьToolStripMenuItem1});
+            this.contextMenuStripRight.Name = "contextMenuStripRight";
+            this.contextMenuStripRight.Size = new System.Drawing.Size(155, 48);
+            // 
+            // редактироватьToolStripMenuItem1
+            // 
+            this.редактироватьToolStripMenuItem1.Name = "редактироватьToolStripMenuItem1";
+            this.редактироватьToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.редактироватьToolStripMenuItem1.Text = "Редактировать";
+            this.редактироватьToolStripMenuItem1.Click += new System.EventHandler(this.редактироватьToolStripMenuItem1_Click);
+            // 
+            // удалитьToolStripMenuItem1
+            // 
+            this.удалитьToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.строкуToolStripMenuItem,
+            this.контрактToolStripMenuItem});
+            this.удалитьToolStripMenuItem1.Name = "удалитьToolStripMenuItem1";
+            this.удалитьToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
+            this.удалитьToolStripMenuItem1.Text = "Удалить";
+            // 
+            // строкуToolStripMenuItem
+            // 
+            this.строкуToolStripMenuItem.Name = "строкуToolStripMenuItem";
+            this.строкуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.строкуToolStripMenuItem.Text = "Строку";
+            // 
+            // контрактToolStripMenuItem
+            // 
+            this.контрактToolStripMenuItem.Name = "контрактToolStripMenuItem";
+            this.контрактToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.контрактToolStripMenuItem.Text = "Контракт";
+            // 
+            // удалитьToolStripMenuItem2
+            // 
+            this.удалитьToolStripMenuItem2.Name = "удалитьToolStripMenuItem2";
+            this.удалитьToolStripMenuItem2.Size = new System.Drawing.Size(190, 22);
+            this.удалитьToolStripMenuItem2.Text = "Удалить";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1465, 637);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.connectionStatusLabel);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.ViviodLineButton);
@@ -150,6 +189,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LeftMainGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightMainGrid)).EndInit();
+            this.contextMenuStripLeft.ResumeLayout(false);
+            this.contextMenuStripRight.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,10 +202,16 @@
         private System.Windows.Forms.Button ViviodLineButton;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label connectionStatusLabel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripLeft;
+        private System.Windows.Forms.ToolStripMenuItem редактироватьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripRight;
+        private System.Windows.Forms.ToolStripMenuItem редактироватьToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem строкуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem контрактToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem2;
     }
 }
 

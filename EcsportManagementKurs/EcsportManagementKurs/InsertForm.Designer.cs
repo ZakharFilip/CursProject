@@ -34,6 +34,7 @@
             this.AddContractButt = new System.Windows.Forms.Button();
             this.NameOfProductLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DataSelecter = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.AddContractLineButt = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@
             this.DataInsertGrid = new System.Windows.Forms.DataGridView();
             this.backToMainButt = new System.Windows.Forms.Button();
             this.RedactPenisbutton = new System.Windows.Forms.Button();
-            this.DataSelecter = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataInsertGrid)).BeginInit();
@@ -107,6 +108,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Новый Договор";
             // 
+            // DataSelecter
+            // 
+            this.DataSelecter.Location = new System.Drawing.Point(349, 41);
+            this.DataSelecter.Name = "DataSelecter";
+            this.DataSelecter.Size = new System.Drawing.Size(119, 20);
+            this.DataSelecter.TabIndex = 10;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label2);
@@ -140,6 +148,7 @@
             this.AddContractLineButt.TabIndex = 8;
             this.AddContractLineButt.Text = "Добавить";
             this.AddContractLineButt.UseVisualStyleBackColor = true;
+            this.AddContractLineButt.Click += new System.EventHandler(this.AddContractLineButt_Click);
             // 
             // label3
             // 
@@ -199,18 +208,22 @@
             this.RedactPenisbutton.UseVisualStyleBackColor = true;
             this.RedactPenisbutton.Click += new System.EventHandler(this.RedactPenisbutton_Click);
             // 
-            // DataSelecter
+            // button1
             // 
-            this.DataSelecter.Location = new System.Drawing.Point(349, 41);
-            this.DataSelecter.Name = "DataSelecter";
-            this.DataSelecter.Size = new System.Drawing.Size(119, 20);
-            this.DataSelecter.TabIndex = 10;
+            this.button1.Location = new System.Drawing.Point(639, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Заполнить договор";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // InsertForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 438);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.RedactPenisbutton);
             this.Controls.Add(this.backToMainButt);
             this.Controls.Add(this.DataInsertGrid);
@@ -247,5 +260,6 @@
         private System.Windows.Forms.Button backToMainButt;
         private System.Windows.Forms.Button RedactPenisbutton;
         private System.Windows.Forms.DateTimePicker DataSelecter;
+        private System.Windows.Forms.Button button1;
     }
 }

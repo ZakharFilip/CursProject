@@ -160,7 +160,7 @@ namespace EcsportManagementKurs
             string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
             SqlConnection connection = new SqlConnection(connectionString);
             connection = new SqlConnection(connectionString);
-            sqlDataAdapterForLeftGrid = new SqlDataAdapter($"SELECT * FROM StaticProperty", connection);
+            sqlDataAdapterForLeftGrid = new SqlDataAdapter($"SELECT * FROM Contract", connection);
             DataTable dataTable = new DataTable();
             sqlDataAdapterForLeftGrid.Fill(dataTable);
             LeftMainGrid.DataSource = dataTable;

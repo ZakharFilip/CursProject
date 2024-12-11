@@ -53,12 +53,14 @@ namespace EcsportManagementKurs
             
         }
 
+        public int klickcounter = 0;
         private void AddContractButt_Click(object sender, EventArgs e)
         {
             
-            int klickcounter = 0;
+            
             string goodData = "";
 
+            AddContractButt.ForeColor = System.Drawing.Color.Gray;
             string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
@@ -66,7 +68,7 @@ namespace EcsportManagementKurs
             {
                 if (klickcounter==0)
                 {
-                    MessageBox.Show("Раблотав");
+                    
                     AddContractButt.ForeColor = System.Drawing.Color.Gray;
 
                     string selectQuery = "SELECT * FROM Contract;";
@@ -80,15 +82,33 @@ namespace EcsportManagementKurs
                     newRow["idSupplier"] = textBox1.Text;//int.Parse(fortype);
                     newRow["idRecipient"] = textBox2.Text;
 
+
+
                     string newData = DataSelecter.Text;
                     newData = newData.Replace('.', '_').Replace(' ', '_');
                     newRow["Date"] = DataSelecter.Text;
 
                     ContractLineSet.Tables[0].Rows.Add(newRow);
+
+                    SqlCommandBuilder commandBuilder = new SqlCommandBuilder(SqlDataAdapterForContract);
+                    SqlDataAdapterForContract.Update(ContractLineSet);
+
+                    
                     klickcounter++;
+
+
+                    ContractSet.Clear();
+                    string SelectForDataInsertGrid = "SELECT * FROM Contract;";
+                    sqlDataAdapterForataInsertGrid = new SqlDataAdapter(SelectForDataInsertGrid, connection);
+
+                    sqlDataAdapterForataInsertGrid.Fill(ContractSet);
+                    DataInsertGrid.DataSource = ContractSet.Tables[0];
+
+
                 }
                 else
                 {
+                    AddContractButt.ForeColor = System.Drawing.Color.Gray;
                     MessageBox.Show("Чебукиска");
                     //По поволду даты конвертирование у чата ГПТ спросить
                 }
@@ -112,6 +132,70 @@ namespace EcsportManagementKurs
             }
             EditAddPage editAddPage = new EditAddPage(selectedRowIndex, ContractSet, sqlDataAdapterForataInsertGrid);
             editAddPage.Show();
+        }
+
+        private void AddContractLineButt_Click(object sender, EventArgs e)
+        {
+            //ВВод
+            string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+
+
+            string selectQuery = "SELECT * FROM ContractLine;";
+            SqlDataAdapter SqlDataAdapterForContract = new SqlDataAdapter(selectQuery, connection);
+
+            ContractLineSet = new DataSet();
+            ContractLineSet.Clear();
+            SqlDataAdapterForContract.Fill(ContractLineSet);
+
+            DataRow newRow = ContractLineSet.Tables[0].NewRow();
+            newRow["idContract"] = idchnik;
+            newRow["idMaterial"] = textBox5.Text;
+            newRow["Volume"] = textBox6.Text;
+            newRow["Summ"] = textBox4.Text;
+
+            ContractLineSet.Tables[0].Rows.Add(newRow);
+
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(SqlDataAdapterForContract);
+            SqlDataAdapterForContract.Update(ContractLineSet);
+
+
+           
+
+
+            ContractSet.Clear();
+
+            string SelectForDataInsertGrid = $"SELECT * FROM ContractLine WHERE idContract = {idchnik};";
+            sqlDataAdapterForataInsertGrid = new SqlDataAdapter(SelectForDataInsertGrid, connection);
+
+            sqlDataAdapterForataInsertGrid.Fill(ContractSet);
+            DataInsertGrid.DataSource = ContractSet.Tables[0];
+        }
+
+        int idchnik;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            if (DataInsertGrid.SelectedRows.Count > 0)
+            {
+                int selectedIndex = DataInsertGrid.SelectedRows[0].Index;
+                idchnik = Convert.ToInt32(DataInsertGrid.Rows[selectedIndex].Cells[0].Value);
+
+                string selectForRightGrid = $"SELECT * FROM ContractLine WHERE idContract = {idchnik}";
+                sqlDataAdapterForataInsertGrid = new SqlDataAdapter(selectForRightGrid, connection);
+                ContractLineSet.Clear();
+
+                sqlDataAdapterForataInsertGrid.Fill(ContractLineSet);
+
+                DataInsertGrid.DataSource = ContractLineSet.Tables[0];
+
+            }
+            else { MessageBox.Show("Выберите строку в таблице."); }
         }
     }
 }

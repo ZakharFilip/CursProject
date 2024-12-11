@@ -41,11 +41,11 @@ namespace EcsportManagementKurs
 
 
                
-                string selectForRightGrid = "SELECT * FROM ContractLine";
-                 SelectForRightGrid = new SqlDataAdapter(selectForRightGrid, connection);
+                //string selectForRightGrid = "SELECT * FROM ContractLine";
+                // SelectForRightGrid = new SqlDataAdapter(selectForRightGrid, connection);
 
-                SelectForRightGrid.Fill(ContractLineSet);
-                RightMainGrid.DataSource = ContractLineSet.Tables[0];
+                //SelectForRightGrid.Fill(ContractLineSet);
+                //RightMainGrid.DataSource = ContractLineSet.Tables[0];
 
             }
 
@@ -136,7 +136,24 @@ namespace EcsportManagementKurs
         private void ViviodLineButton_Click(object sender, EventArgs e)
         {
             //Вывод вправоооооооооооооооооо
-            
+            string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            if (LeftMainGrid.SelectedRows.Count > 0)
+            {
+                int selectedIndex = LeftMainGrid.SelectedRows[0].Index;
+                int id = Convert.ToInt32(LeftMainGrid.Rows[selectedIndex].Cells[0].Value);
+
+                string selectForRightGrid = $"SELECT * FROM ContractLine WHERE idContract = {id}";
+                SelectForRightGrid = new SqlDataAdapter(selectForRightGrid, connection);
+                ContractLineSet.Clear();
+                SelectForRightGrid.Fill(ContractLineSet);
+                RightMainGrid.DataSource = ContractLineSet.Tables[0];
+
+            }
+            else{MessageBox.Show("Выберите строку в таблице."); }
+
         }
         void UpdateDataGrid()
         {
@@ -182,6 +199,31 @@ namespace EcsportManagementKurs
 
                 UpdateDataGrid();
             }
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Вывести содержание на сомом деле
+
+            string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            if (LeftMainGrid.SelectedRows.Count > 0)
+            {
+                int selectedIndex = LeftMainGrid.SelectedRows[0].Index;
+                int id = Convert.ToInt32(LeftMainGrid.Rows[selectedIndex].Cells[0].Value);
+
+                string selectForRightGrid = $"SELECT * FROM ContractLine WHERE idContract = {id}";
+                SelectForRightGrid = new SqlDataAdapter(selectForRightGrid, connection);
+                ContractLineSet.Clear();
+                SelectForRightGrid.Fill(ContractLineSet);
+                RightMainGrid.DataSource = ContractLineSet.Tables[0];
+
+            }
+            else { MessageBox.Show("Выберите строку в таблице."); }
+
+
         }
     }
     

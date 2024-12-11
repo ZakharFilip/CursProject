@@ -64,8 +64,9 @@ namespace EcsportManagementKurs
             connection.Open();
             if (connection.State == System.Data.ConnectionState.Open)
             {
-                if (klickcounter==2)
+                if (klickcounter==0)
                 {
+                    MessageBox.Show("Раблотав");
                     AddContractButt.ForeColor = System.Drawing.Color.Gray;
 
                     string selectQuery = "SELECT * FROM Contract;";
@@ -75,78 +76,42 @@ namespace EcsportManagementKurs
                     SqlDataAdapterForContract.Fill(ContractLineSet);
 
                     DataRow newRow = ContractLineSet.Tables[0].NewRow();
-                    string fortype = textBox3.Text;
+                   
                     newRow["idSupplier"] = textBox1.Text;//int.Parse(fortype);
                     newRow["idRecipient"] = textBox2.Text;
-                    newRow["Date"] = Convert.ToDateTime(fortype);
+
+                    string newData = DataSelecter.Text;
+                    newData = newData.Replace('.', '_').Replace(' ', '_');
+                    newRow["Date"] = DataSelecter.Text;
 
                     ContractLineSet.Tables[0].Rows.Add(newRow);
                     klickcounter++;
                 }
                 else
                 {
-                    goodData = DataSelecter.Text;
-                    goodData=DataTranslater(goodData);
-                    MessageBox.Show(goodData);
+                    MessageBox.Show("Чебукиска");
                     //По поволду даты конвертирование у чата ГПТ спросить
                 }
             }
         }
 
 
-        public string DataTranslater(string badData)
+       
+
+        private void RedactPenisbutton_Click(object sender, EventArgs e)
         {
-            string goodData = "";
-            string day = ""; day = day + badData[0]; day = day + badData[1];
-            string mounth="";
-            string year="";
-
-            int i=3;
-            switch (badData[i])
+            var selectedRowIndex = -1;
+            if (DataInsertGrid.SelectedRows.Count > 0 && DataInsertGrid.SelectedRows[0].Index < DataInsertGrid.Rows.Count - 1)
             {
-                case 'я':
-                    mounth = "01";
-                    break;
-                case 'ф':
-                    mounth = "02";
-                    break;
-                case 'м':
-                    if (badData[i + 2] == 'р') { mounth = "03"; } else { mounth = "05"; }
-                    break;
-                case 'а':
-                    if (badData[i + 1] == 'п') { mounth = "04"; } else { mounth = "08"; }
-                    break;
-                case 'и':
-                    if (badData[i + 2] == 'н') { mounth = "06"; } else { mounth = "07"; }
-                    break;
-                case 'с':
-                    mounth = "09";
-                    break;
-                case 'о':
-                    mounth = "10";
-                    break;
-                case 'н':
-                    mounth = "11";
-                    break;
-                case 'д':
-                    mounth = "12";
-                    break;
+                selectedRowIndex = DataInsertGrid.SelectedRows[0].Index;
             }
-
-            for ( i = 3; i < badData. Length; i++)
+            else
             {
-                if (badData[i] ==' ')
-                { break; }
+                MessageBox.Show("Вы не выбрали строку для редактирования!");
+                return;
             }
-
-            for (int j = 0; i < 4; i++)
-            {
-                year = year + badData[i+j];
-            }
-
-            goodData = year + '-' + mounth + '-' + day;
-
-            return goodData;
+            EditAddPage editAddPage = new EditAddPage(selectedRowIndex, ContractSet, sqlDataAdapterForataInsertGrid);
+            editAddPage.Show();
         }
     }
 }

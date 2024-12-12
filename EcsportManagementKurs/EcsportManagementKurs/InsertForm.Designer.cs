@@ -230,7 +230,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "InsertForm";
-            this.Text = "Формирование Договора";
+            this.Text = "+";
             this.Load += new System.EventHandler(this.InsertForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

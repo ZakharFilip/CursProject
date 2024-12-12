@@ -225,6 +225,50 @@ namespace EcsportManagementKurs
 
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            string connectionString = @"Data Source=pcsqlstud01;Initial Catalog=10220468;Integrated Security=True;Encrypt=False";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            if (LeftMainGrid.SelectedRows.Count > 0)
+            {
+                int selectedIndex = LeftMainGrid.SelectedRows[0].Index;
+                int id = Convert.ToInt32(LeftMainGrid.Rows[selectedIndex].Cells[0].Value);
+
+                string selectForRightGrid = $"SELECT * FROM ContractLine WHERE idContract = {id}";
+                SelectForRightGrid = new SqlDataAdapter(selectForRightGrid, connection);
+
+                SqlCommand command1 = new SqlCommand(selectForRightGrid, connection);
+
+                SqlDataReader reader = command1.ExecuteReader();
+
+
+                var dataList = new System.Collections.Generic.List<string>();
+                var dataList1 = new System.Collections.Generic.List<string>();
+
+                while (reader.Read())
+                {
+                    string value = reader["Volume"].ToString();
+                    dataList.Add(value);
+
+                    string value1 = reader["Volume"].ToString();
+                    dataList1.Add(value1);
+                }
+
+                string ForMessageBoxeNigga="";
+                for (int i = 0; i < dataList.Count; i++) 
+                {
+                ForMessageBoxeNigga += dataList[i].ToString();
+                    ForMessageBoxeNigga += " + \n";
+                }
+                MessageBox.Show(ForMessageBoxeNigga);
+            }
+
+
+        }
     }
     
     

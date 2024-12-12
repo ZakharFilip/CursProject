@@ -246,25 +246,7 @@ namespace EcsportManagementKurs
                 SqlDataReader reader = command1.ExecuteReader();
 
 
-                var dataList = new System.Collections.Generic.List<string>();
-                var dataList1 = new System.Collections.Generic.List<string>();
-
-                while (reader.Read())
-                {
-                    string value = reader["Volume"].ToString();
-                    dataList.Add(value);
-
-                    string value1 = reader["Volume"].ToString();
-                    dataList1.Add(value1);
-                }
-
-                string ForMessageBoxeNigga="";
-                for (int i = 0; i < dataList.Count; i++) 
-                {
-                ForMessageBoxeNigga += dataList[i].ToString();
-                    ForMessageBoxeNigga += " + \n";
-                }
-                MessageBox.Show(ForMessageBoxeNigga);
+                
             }
 
 

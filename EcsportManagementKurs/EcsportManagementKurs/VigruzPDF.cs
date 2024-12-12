@@ -32,10 +32,13 @@ namespace EcsportManagementKurs
     {
         VigruzPDF(SqlDataReader reader)
         {
-            Document Nig = new Document();
+            
 
             var dataList = new System.Collections.Generic.List<string>();
             var dataList1 = new System.Collections.Generic.List<string>();
+
+          //Создать код для формирования листов и добавления их в файл пдф или файл тхт 
+
 
             while (reader.Read())
             {

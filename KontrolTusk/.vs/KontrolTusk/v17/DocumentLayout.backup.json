@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\10220468\\Documents\\GitHub\\CursProject\\KontrolTusk\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{86FFEC00-3091-4E99-8435-E1BD6DA3A7DD}|KontrolTusk\\KontrolTusk.csproj|c:\\users\\10220468\\documents\\github\\cursproject\\kontroltusk\\kontroltusk\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FFEC00-3091-4E99-8435-E1BD6DA3A7DD}|KontrolTusk\\KontrolTusk.csproj|solutionrelative:kontroltusk\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86FFEC00-3091-4E99-8435-E1BD6DA3A7DD}|KontrolTusk\\KontrolTusk.csproj|c:\\users\\10220468\\documents\\github\\cursproject\\kontroltusk\\kontroltusk\\xxx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FFEC00-3091-4E99-8435-E1BD6DA3A7DD}|KontrolTusk\\KontrolTusk.csproj|solutionrelative:kontroltusk\\xxx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{86FFEC00-3091-4E99-8435-E1BD6DA3A7DD}|KontrolTusk\\KontrolTusk.csproj|c:\\users\\10220468\\documents\\github\\cursproject\\kontroltusk\\kontroltusk\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{86FFEC00-3091-4E99-8435-E1BD6DA3A7DD}|KontrolTusk\\KontrolTusk.csproj|solutionrelative:kontroltusk\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -14,16 +22,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "XXX.cs",
+              "DocumentMoniker": "C:\\Users\\10220468\\Documents\\GitHub\\CursProject\\KontrolTusk\\KontrolTusk\\XXX.cs",
+              "RelativeDocumentMoniker": "KontrolTusk\\XXX.cs",
+              "ToolTip": "C:\\Users\\10220468\\Documents\\GitHub\\CursProject\\KontrolTusk\\KontrolTusk\\XXX.cs*",
+              "RelativeToolTip": "KontrolTusk\\XXX.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T13:04:31.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\10220468\\Documents\\GitHub\\CursProject\\KontrolTusk\\KontrolTusk\\Form1.cs",
+              "RelativeDocumentMoniker": "KontrolTusk\\Form1.cs",
+              "ToolTip": "C:\\Users\\10220468\\Documents\\GitHub\\CursProject\\KontrolTusk\\KontrolTusk\\Form1.cs*",
+              "RelativeToolTip": "KontrolTusk\\Form1.cs*",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T11:00:42.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\10220468\\Documents\\GitHub\\CursProject\\KontrolTusk\\KontrolTusk\\Form1.cs",
               "RelativeDocumentMoniker": "KontrolTusk\\Form1.cs",
-              "ToolTip": "C:\\Users\\10220468\\Documents\\GitHub\\CursProject\\KontrolTusk\\KontrolTusk\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "KontrolTusk\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\10220468\\Documents\\GitHub\\CursProject\\KontrolTusk\\KontrolTusk\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "KontrolTusk\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T10:33:52.432Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"

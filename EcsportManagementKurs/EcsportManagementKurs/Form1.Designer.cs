@@ -67,7 +67,7 @@
             this.удалитьToolStripMenuItem,
             this.удалитьToolStripMenuItem2});
             this.contextMenuStripLeft.Name = "contextMenuStripLeft";
-            this.contextMenuStripLeft.Size = new System.Drawing.Size(191, 70);
+            this.contextMenuStripLeft.Size = new System.Drawing.Size(191, 92);
             // 
             // редактироватьToolStripMenuItem
             // 

@@ -1,0 +1,10 @@
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\bin\Debug\KontrolTusk.exe.config
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\bin\Debug\KontrolTusk.exe
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\bin\Debug\KontrolTusk.pdb
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\obj\Debug\KontrolTusk.csproj.AssemblyReference.cache
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\obj\Debug\KontrolTusk.Form1.resources
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\obj\Debug\KontrolTusk.Properties.Resources.resources
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\obj\Debug\KontrolTusk.csproj.GenerateResource.cache
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\obj\Debug\KontrolTusk.csproj.CoreCompileInputs.cache
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\obj\Debug\KontrolTusk.exe
+C:\Users\10220468\Documents\GitHub\CursProject\KontrolTusk\KontrolTusk\obj\Debug\KontrolTusk.pdb

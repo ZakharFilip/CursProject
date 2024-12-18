@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Crypto.Signers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Button = System.Windows.Forms.Button;
 
 namespace EcsportManagementKurs
 {
@@ -245,11 +247,49 @@ namespace EcsportManagementKurs
 
                 SqlDataReader reader = command1.ExecuteReader();
 
+                string NamePDF = PromptForValue("Введите название отчёта:");
 
-                
+                VigruzPDF.Maker(reader, NamePDF);
+                MessageBox.Show("Документ сохранён");
+
+            }
+            else { MessageBox.Show("Выберите строку в таблице."); }
+
+
+        }
+
+
+
+
+
+        private string PromptForValue(string message)
+        {
+            string result = "";
+            Form prompt = new Form()
+            {
+                Width = 300,
+                Height = 150,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = "Ввод значения",
+                StartPosition = FormStartPosition.CenterScreen
+            };
+
+            Label label = new Label() { Left = 10, Top = 20, Text = message, Width = 260 };
+            System.Windows.Forms.TextBox inputBox = new System.Windows.Forms.TextBox() { Left = 10, Top = 50, Width = 260 };
+            Button confirmation = new Button() { Text = "OK", Left = 110, Width = 80, Top = 80, DialogResult = DialogResult.OK };
+
+            confirmation.Click += (sender, e) => { prompt.Close(); };
+            prompt.Controls.Add(label);
+            prompt.Controls.Add(inputBox);
+            prompt.Controls.Add(confirmation);
+            prompt.AcceptButton = confirmation;
+
+            if (prompt.ShowDialog() == DialogResult.OK)
+            {
+                result = inputBox.Text;
             }
 
-
+            return result;
         }
     }
     

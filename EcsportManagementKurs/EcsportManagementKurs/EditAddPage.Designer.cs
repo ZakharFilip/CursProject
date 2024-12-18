@@ -30,12 +30,12 @@
         {
             this.changeItemButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.testlabel = new System.Windows.Forms.Label();
             this.NameOfProductLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.testlabel);
             this.groupBox1.Controls.Add(this.NameOfProductLabel);
             this.groupBox1.Controls.Add(this.changeItemButton);
             this.groupBox1.Controls.Add(this.label1);
@@ -65,10 +64,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Редактировать";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(339, 44);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(134, 20);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
             // testlabel
             // 
             this.testlabel.AutoSize = true;
-            this.testlabel.Location = new System.Drawing.Point(75, 85);
+            this.testlabel.Location = new System.Drawing.Point(-11, 119);
             this.testlabel.Name = "testlabel";
             this.testlabel.Size = new System.Drawing.Size(39, 13);
             this.testlabel.TabIndex = 10;
@@ -106,25 +112,20 @@
             this.textBox4.Size = new System.Drawing.Size(121, 20);
             this.textBox4.TabIndex = 4;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(339, 44);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(134, 20);
-            this.dateTimePicker1.TabIndex = 11;
-            // 
             // EditAddPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 121);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.testlabel);
             this.Name = "EditAddPage";
-            this.Text = "Редактировать договор договор";
+            this.Text = "Редактировать договор";
             this.Load += new System.EventHandler(this.EditAddPage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

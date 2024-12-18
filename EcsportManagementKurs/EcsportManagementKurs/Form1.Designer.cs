@@ -67,7 +67,7 @@
             this.удалитьToolStripMenuItem,
             this.удалитьToolStripMenuItem2});
             this.contextMenuStripLeft.Name = "contextMenuStripLeft";
-            this.contextMenuStripLeft.Size = new System.Drawing.Size(191, 92);
+            this.contextMenuStripLeft.Size = new System.Drawing.Size(191, 70);
             // 
             // редактироватьToolStripMenuItem
             // 
@@ -159,7 +159,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(137, 582);
+            this.button5.Location = new System.Drawing.Point(44, 564);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(355, 46);
             this.button5.TabIndex = 24;
@@ -188,8 +188,9 @@
             this.Controls.Add(this.ViviodLineButton);
             this.Controls.Add(this.RightMainGrid);
             this.Controls.Add(this.LeftMainGrid);
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Форма";
+            this.Text = "Главное меню";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LeftMainGrid)).EndInit();
             this.contextMenuStripLeft.ResumeLayout(false);
